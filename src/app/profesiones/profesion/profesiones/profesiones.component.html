@@ -1,0 +1,24 @@
+<h2>Profesiones</h2>
+
+<dl>
+    <td>Nombre:</td>
+<dd>{{nombreProfesion}}</dd>
+
+    <td>Edad:</td>
+    <dd>{{edad}}</dd>
+</dl>
+
+<button 
+*ngIf="nombreProfesion !== 'Policia'"
+(click)="cambiarNombre()" class="btn btn-primary mx-2">
+cambiar nombre </button>
+
+
+<button 
+*ngIf="edad !== 56"
+(click)="cambiarEdad()" class="btn btn-primary"> cambiar edad </button>
+
+
+<button (click)="reset()" class="btn btn-primary mx-2">
+    Reset
+</button>

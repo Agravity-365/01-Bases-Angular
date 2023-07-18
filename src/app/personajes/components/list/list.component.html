@@ -1,0 +1,27 @@
+<p>Listado</p>
+
+
+<ul class="list-group">
+    <li *ngFor="let item of listaPersonajes;
+    let i = index;
+    let esPrimero= first;
+    let esUltimo = last;
+    let esParoNO = even;
+    let esImparoNo = odd"
+
+    class="list-group-item d-flex justify-content-between align-item-center"
+    [ngClass]="{
+        'list-group-item-dark': esParoNO,
+        'list-group-item-primary': esImparoNo
+    }"> 
+    <div>
+    <span class="text-primary">{{i + 1}}</span>
+    Personaje: {{item.name}} Edad: {{item.edad}}
+    <span>Es el primero: {{esPrimero}} </span>
+    <span>Es el Ultimo: {{esUltimo}} </span>
+    <span>Es par: {{esParoNO}} </span>
+    <span>Es el impar: {{esImparoNo}} </span>
+</div>
+    <button (click)="EliminarPersonajeList(item.id)"class="btn btn-danger" >X</button>
+</li>
+</ul>
