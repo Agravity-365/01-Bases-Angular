@@ -1,0 +1,19 @@
+<h1>Lista de profesiones</h1>
+
+<div *ngIf="itemEliminado else mostrarMensaje">
+    <h3>Item Borrado: {{itemEliminado}} </h3>
+</div>
+
+<ng-template #mostrarMensaje>  
+<h3 >No se a borrado nada</h3>
+</ng-template>
+
+<button 
+*ngIf="listaProfesiones.length > 0"
+(click)="eliminarUltimoItem()" class="btn btn-outline-danger">Borrar ultimo Item</button>
+
+<ul class="mt2 list-group">
+    <li
+    *ngFor="let names of listaProfesiones"
+    class="list-group-item">{{names}}</li>
+</ul>

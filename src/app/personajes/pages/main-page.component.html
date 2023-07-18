@@ -1,0 +1,20 @@
+<p>Admin Personajes</p>
+
+<div class="row" >
+    <div class="col">
+        <app-list
+        [listaPersonajes]="varPersonajeService.personajesMain"
+        (indiceEliminar)="varPersonajeService.EliminarPersonajePageID($event)"></app-list>
+    </div>
+    <div class="col">
+        <app-add-personaje-form (entradaNuevoPersonaje)="varPersonajeService.funcionEntradaNuevoPersonaje($event)" ></app-add-personaje-form>
+    </div>
+
+</div>
+ 
+
+
+
+
+
+
